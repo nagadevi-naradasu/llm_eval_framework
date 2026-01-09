@@ -10,7 +10,11 @@ import logging
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt', quiet=True)
+    try:
+        nltk.download('punkt', quiet=True)
+    except Exception as e:
+        # Prevent crash on import if download fails (will fail later if used)
+        pass
 
 logger = logging.getLogger(__name__)
 

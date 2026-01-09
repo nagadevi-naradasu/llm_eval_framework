@@ -12,7 +12,11 @@ logger = logging.getLogger(__name__)
 class RagMetricBase(Metric):
     def __init__(self, model="gpt-3.5-turbo"):
         self.model = model
-        self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key:
+            self.client = openai.OpenAI(api_key=api_key)
+        else:
+            self.client = None # Client will be None if no key provided
 
     def _call_llm(self, prompt: str) -> str:
         try:

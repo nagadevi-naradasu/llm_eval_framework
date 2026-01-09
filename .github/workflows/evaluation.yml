@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
 
+      - name: Install dependencies
+        run: poetry install --no-interaction
+
+      - name: Download NLTK data
+        run: poetry run python -m nltk.downloader punkt
+
       - name: Run tests
         run: poetry run pytest tests/
 
