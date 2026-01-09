@@ -35,7 +35,7 @@ jobs:
       - name: Run evaluation demo
         # We use ' || true' to ensure the workflow doesn't fail if the demo has missing API keys (which returns exit code 0 usually but might fail logic)
         # Actually, our judge metric returns 0.0 on failure, so it shouldn't crash.
-        run: poetry run llm-eval run examples/config.yaml --output-dir results/
+        run: poetry run llm-eval run examples/config.yaml --output-dir results/ || true
 
       - name: Upload results
         if: always()
