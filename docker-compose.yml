@@ -1,0 +1,13 @@
+
+
+services:
+  llm-eval:
+    build: .
+    volumes:
+      - ./benchmarks:/app/benchmarks
+      - ./examples:/app/examples
+      - ./results:/app/results
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    command: ["run", "examples/config.yaml"]

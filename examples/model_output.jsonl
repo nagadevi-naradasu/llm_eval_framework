@@ -1,0 +1,25 @@
+{"query": "What is the capital of France?", "generated_answer": "Paris is the capital of France.", "id": 0}
+{"query": "Who wrote Romeo and Juliet?", "generated_answer": "William Shakespeare.", "id": 1}
+{"query": "Explain quantum entanglement.", "generated_answer": "It's when particles are linked and affect each other instantly over distance.", "id": 2}
+{"query": "What is the speed of light?", "generated_answer": "About 300,000 km/s.", "id": 3}
+{"query": "How do you make a cake?", "generated_answer": "Mix flour, sugar, eggs, butter and bake.", "id": 4}
+{"query": "What is Python?", "generated_answer": "A programming language.", "id": 5}
+{"query": "Who is the CEO of Tesla?", "generated_answer": "Elon Musk.", "id": 6}
+{"query": "What is a black hole?", "generated_answer": "A region where gravity pulls so much that even light can not get out.", "id": 7}
+{"query": "What is the tallest mountain in the world?", "generated_answer": "Mount Everest.", "id": 8}
+{"query": "What is machine learning?", "generated_answer": "ML is when computers learn from data.", "id": 9}
+{"query": "What is photosyntheis?", "generated_answer": "Plants making food from sun.", "id": 10}
+{"query": "What creates the tides?", "generated_answer": "The moon's gravity.", "id": 11}
+{"query": "What does HTTP stand for?", "generated_answer": "Hypertext Transfer Protocol.", "id": 12}
+{"query": "Who painted the Mona Lisa?", "generated_answer": "Da Vinci.", "id": 13}
+{"query": "What is the boiling point of water?", "generated_answer": "100 degrees Celsius.", "id": 14}
+{"query": "What is a neuron?", "generated_answer": "A nerve cell.", "id": 15}
+{"query": "What is the function of the heart?", "generated_answer": "To pump blood.", "id": 16}
+{"query": "What is DNA?", "generated_answer": "Genetic material.", "id": 17}
+{"query": "What is the theory of relativity?", "generated_answer": "Einstein's theory about gravity and time.", "id": 18}
+{"query": "What is a database?", "generated_answer": "A place to store data.", "id": 19}
+{"query": "What is cloud computing?", "generated_answer": "Using remote servers to store and process data.", "id": 20}
+{"query": "What is an API?", "generated_answer": "Application Programming Interface.", "id": 21}
+{"query": "What is open source software?", "generated_answer": "Free software you can change.", "id": 22}
+{"query": "What is a semiconductor?", "generated_answer": "Material that conducts electricity partially.", "id": 23}
+{"query": "What is the internet?", "generated_answer": "A network of networks.", "id": 24}

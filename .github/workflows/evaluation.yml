@@ -1,0 +1,42 @@
+name: Evaluation Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry config virtualenvs.create false
+        poetry install
+
+    - name: Run Tests
+      run: |
+        pytest tests/ --cov=src/llm_eval
+
+    - name: Run Evaluation Demo
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        llm-eval run examples/config.yaml
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: evaluation-results
+        path: results/

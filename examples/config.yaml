@@ -1,0 +1,23 @@
+dataset_path: "benchmarks/rag_benchmark.jsonl"
+output_dir: "results"
+
+models:
+  - name: "gpt-3.5-turbo-finetuned"
+    output_path: "examples/model_output.jsonl"
+
+metrics:
+  - "bleu"
+  - "rouge-l"
+  - "bert-score"
+  - "faithfulness"
+  - "context-relevancy"
+  - "answer-relevancy"
+
+judge_config:
+  provider: "openai"
+  model: "gpt-4"
+  dimensions:
+    - "coherence"
+    - "relevance"
+    - "safety"
+  api_key_env_var: "OPENAI_API_KEY"
