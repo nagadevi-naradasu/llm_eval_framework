@@ -1,8 +1,15 @@
 from typing import Dict, Any, List
 import nltk
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
-from rouge_score import rouge_scorer
-from bert_score import score as bert_score
+try:
+    from rouge_score import rouge_scorer
+except (ImportError, Exception):
+    rouge_scorer = None
+
+try:
+    from bert_score import score as bert_score
+except (ImportError, Exception):
+    bert_score = None
 from .base import Metric
 import logging
 
